@@ -1,0 +1,46 @@
+name: "Godot 4 Android Auto-Build"
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  export-android:
+    name: Android Export
+    runs-on: ubuntu-latest
+    container:
+      image: barichello/godot-ci:4.2.1
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Setup Android SDK Environment
+        uses: android-actions/setup-android@v3
+
+      - name: Setup Java JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Create Export Folder
+        run: mkdir -v -p build/android
+
+      - name: Export APK via Godot CLI
+        run: |
+          godot --headless --export-debug "Android" build/android/REGRETION-debug.apk
+
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: REGRETION-Android-Build
+          path: build/android/REGRETION-debug.apk
+          retention-days: 7

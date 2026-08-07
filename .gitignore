@@ -1,0 +1,12 @@
+# Godot 4 IGNORES
+.godot/
+*.translation
+
+# Android Export Build Artifacts
+*.apk
+*.aab
+*.keystore
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
