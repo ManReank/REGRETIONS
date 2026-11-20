@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c2h052rdaktnm"]
+
+[ext_resource type="PackedScene" uid="uid://d12x6e6tsbduv" path="res://scenes/eira/eira.tscn" id="1_od50t"]
+
+[node name="WhiteRoom" type="Node2D" unique_id=844027306]
+
+[node name="Ground" type="Node2D" parent="." unique_id=1210889622]
+
+[node name="WorldObjects" type="Node2D" parent="." unique_id=425917522]
+
+[node name="Furniture" type="Node2D" parent="WorldObjects" unique_id=2097136642]
+
+[node name="Interactables" type="Node2D" parent="WorldObjects" unique_id=373447528]
+
+[node name="Decorations" type="Node2D" parent="WorldObjects" unique_id=1332493937]
+
+[node name="Characters" type="Node2D" parent="." unique_id=1229693719]
+
+[node name="Eira" parent="Characters" unique_id=819956635 instance=ExtResource("1_od50t")]
+
+[node name="NPCs" type="Node2D" parent="Characters" unique_id=1470480740]
+
+[node name="Lighting" type="Node2D" parent="." unique_id=23520138]
+
+[node name="Foreground" type="Node2D" parent="." unique_id=1076815780]

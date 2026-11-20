@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://d12x6e6tsbduv"]
+
+[ext_resource type="Script" uid="uid://b668mb7guqg7a" path="res://scripts/player/eira.gd" id="1_negk1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d11ye"]
+radius = 35.0
+
+[node name="Eira" type="Node2D" unique_id=819956635]
+script = ExtResource("1_negk1")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1291847439]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=989030180]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1000023527]
+
+[node name="InteractionArea" type="Area2D" parent="CharacterBody2D" unique_id=1088023267]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/InteractionArea" unique_id=470551811]
+shape = SubResource("CircleShape2D_d11ye")
+
+[node name="InteractionRay" type="RayCast2D" parent="CharacterBody2D" unique_id=1877980609]
