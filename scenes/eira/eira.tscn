@@ -16,10 +16,8 @@ script = ExtResource("1_negk1")
 shape = SubResource("CircleShape2D_body")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1000023527]
-position = Vector2(384, 314.87503)
 sprite_frames = ExtResource("2_d11ye")
-animation = &"walk_down"
-frame_progress = 0.051446877
+animation = &"idle_left"
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=1088023267]
 collision_layer = 0

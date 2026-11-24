@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var move_speed: float = 100.0
 # Sementara. Skala final ditentukan setelah ukuran ruangan dan kamera jelas.
-@export var sprite_scale: float = 0.12
+@export var sprite_scale: float = 0.15
 
 # Offset supaya kaki Eira tepat di titik (0, 0) node.
 # Nilai = -(posisi kaki di sel 600x1400 - 700), diukur dari CHR-01_Eira.png.
@@ -51,8 +51,7 @@ func _physics_process(_delta: float) -> void:
 
 	if Input.is_action_just_pressed("interact"):
 		InteractionManager.interact()
-
-
+		
 func _update_facing(direction: Vector2) -> void:
 	var has_horizontal: bool = absf(direction.x) > 0.01
 	var has_vertical: bool = absf(direction.y) > 0.01
@@ -79,7 +78,6 @@ func _update_animation(is_moving: bool) -> void:
 	sprite.offset = FEET_OFFSETS[facing]
 	if sprite.animation != animation_name:
 		sprite.play(animation_name)
-
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.has_method("interact"):

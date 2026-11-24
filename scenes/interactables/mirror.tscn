@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://v623g2onj1fk"]
+
+[ext_resource type="Script" uid="uid://d0inivwfyhyov" path="res://core/interaction/interactable.gd" id="1_hj66i"]
+[ext_resource type="Texture2D" uid="uid://bloksiu5tsvg0" path="res://assets/objects/OBJ_07 Cermin 01.png" id="2_iu6bh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_235oj"]
+size = Vector2(141, 185)
+
+[node name="Mirror" type="Area2D" unique_id=297100894]
+visibility_layer = 2
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_hj66i")
+object_id = "mirror"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1680625716]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_iu6bh")
+offset = Vector2(-45, -811)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1161558661]
+shape = SubResource("RectangleShape2D_235oj")

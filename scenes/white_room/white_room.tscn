@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c2h052rdaktnm"]
 
+[ext_resource type="Texture2D" uid="uid://dmfuvsd8ip0od" path="res://assets/environment/ENV_04 Bed.png" id="1_ne8w8"]
 [ext_resource type="PackedScene" uid="uid://d12x6e6tsbduv" path="res://scenes/eira/eira.tscn" id="1_od50t"]
+[ext_resource type="PackedScene" uid="uid://v623g2onj1fk" path="res://scenes/interactables/mirror.tscn" id="2_e61mm"]
 
 [node name="WhiteRoom" type="Node2D" unique_id=844027306]
 
@@ -10,13 +12,22 @@
 
 [node name="Furniture" type="Node2D" parent="WorldObjects" unique_id=2097136642]
 
+[node name="Sprite2D" type="Sprite2D" parent="WorldObjects/Furniture" unique_id=436065874]
+position = Vector2(400, 250)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_ne8w8")
+
 [node name="Interactables" type="Node2D" parent="WorldObjects" unique_id=373447528]
+
+[node name="Mirror" parent="WorldObjects/Interactables" unique_id=297100894 instance=ExtResource("2_e61mm")]
+position = Vector2(760, 380)
 
 [node name="Decorations" type="Node2D" parent="WorldObjects" unique_id=1332493937]
 
 [node name="Characters" type="Node2D" parent="." unique_id=1229693719]
 
 [node name="Eira" parent="Characters" unique_id=819956635 instance=ExtResource("1_od50t")]
+position = Vector2(576, 400)
 
 [node name="NPCs" type="Node2D" parent="Characters" unique_id=1470480740]
 
