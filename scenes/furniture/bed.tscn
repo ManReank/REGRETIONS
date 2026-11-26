@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ha1egntwolxc"]
+
+[ext_resource type="Texture2D" uid="uid://dmfuvsd8ip0od" path="res://assets/environment/ENV_04 Bed.png" id="1_bed"]
+
+[node name="Bed" type="StaticBody2D" unique_id=116703087]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2014144641]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_bed")
+offset = Vector2(-6.5, -330)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=607445480]
+polygon = PackedVector2Array(-166, 1, -27, 56, 190, -74, 68, -155)

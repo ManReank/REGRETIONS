@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="regret"
+config/name="REGRETIONS"
 run/main_scene="uid://cqgh8it7hk6ky"
 config/features=PackedStringArray("4.7")
 
