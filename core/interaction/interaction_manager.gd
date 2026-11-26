@@ -21,7 +21,6 @@ func clear_nearby_object(object: Area2D) -> void:
 
 
 func interact() -> void:
-	print("[DEBUG] interact() dipanggil, nearby_object = ", nearby_object)
 	if nearby_object == null:
 		return
 		

@@ -5,6 +5,8 @@ signal dialogue_line_changed(text: String)
 signal dialogue_finished
 
 const INTERACTIONS_PATH: String = "res://data/dialogue/interactions.json"
+# Objek yang menjalankan aksi (bukan dialog biasa), ditangani sistem lain.
+const ACTION_OBJECTS: Array[String] = ["bed"]
 
 var dialogue_lines: Array[String] = []
 var current_line_index: int = 0
@@ -80,6 +82,8 @@ func finish_dialogue() -> void:
 
 
 func _on_interaction_triggered(object_id: String) -> void:
+	if ACTION_OBJECTS.has(object_id):
+		return
 	var lines: Array[String] = get_interaction_lines(object_id, GameManager.current_day)
 	if lines.is_empty():
 		push_warning("Tidak ada dialog untuk objek: " + object_id)

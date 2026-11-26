@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://ha1egntwolxc"]
 
 [ext_resource type="Texture2D" uid="uid://dmfuvsd8ip0od" path="res://assets/environment/ENV_04 Bed.png" id="1_bed"]
+[ext_resource type="Script" uid="uid://d0inivwfyhyov" path="res://core/interaction/interactable.gd" id="2_qx5gi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bkan"]
+size = Vector2(204, 135)
 
 [node name="Bed" type="StaticBody2D" unique_id=116703087]
 
@@ -11,3 +15,11 @@ offset = Vector2(-6.5, -330)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=607445480]
 polygon = PackedVector2Array(-166, 1, -27, 56, 190, -74, 68, -155)
+
+[node name="SleepArea" type="Area2D" parent="." unique_id=222196634]
+script = ExtResource("2_qx5gi")
+object_id = "bed"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SleepArea" unique_id=103370508]
+position = Vector2(-2, -44.5)
+shape = SubResource("RectangleShape2D_8bkan")

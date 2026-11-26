@@ -20,6 +20,7 @@ GameManager="*uid://bpmhfjwmxc2d4"
 RoomStateManager="*uid://ciahtmuu0ijmc"
 InteractionManager="*uid://dppo7f5801w83"
 DialogueManager="*uid://cerdek2v243j4"
+DayProgress="*uid://gju1gjr55egy"
 
 [display]
 
