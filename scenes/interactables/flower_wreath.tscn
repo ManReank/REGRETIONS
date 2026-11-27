@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dgkebhf7fpnve"]
+
+[ext_resource type="Script" uid="uid://d0inivwfyhyov" path="res://core/interaction/interactable.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bhs1vm0pyqy18" path="res://assets/objects/OBJ_01 Karangan Bunga.png" id="2_tex"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_flower"]
+size = Vector2(31, 33)
+
+[node name="FlowerWreath" type="Area2D" unique_id=1148825633]
+script = ExtResource("1_script")
+object_id = "flower_wreath"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=305043911]
+scale = Vector2(0.031, 0.035)
+texture = ExtResource("2_tex")
+offset = Vector2(78, -701)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1315648735]
+position = Vector2(0.5, -21.5)
+shape = SubResource("RectangleShape2D_flower")

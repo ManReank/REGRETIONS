@@ -1,0 +1,20 @@
+{
+	"mirror": {
+		"default": [
+			"Eira berdiri di hadapan sebuah cermin.",
+			"Pantulan itu terlihat begitu asing.",
+			"Eira: ...Apakah itu benar-benar aku?",
+			"..."
+		]
+	},
+	"bed_locked": {
+		"default": [
+			"Belum bisa tidur. Masih ada yang belum diperiksa."
+		]
+	},
+	"flower_wreath": {
+		"default": [
+			"BUNGA LAYU JIR"
+		]
+	}
+}

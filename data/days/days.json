@@ -1,0 +1,9 @@
+{
+	"1": { "fragment_object": "flower_wreath", "required_objects": ["flower_wreath"] },
+	"2": { "fragment_object": "baby_clothes", "required_objects": ["baby_clothes"] },
+	"3": { "fragment_object": "knife", "required_objects": ["knife"] },
+	"4": { "fragment_object": "blood_stain", "required_objects": ["blood_stain"] },
+	"5": { "fragment_object": "wedding_ring", "required_objects": ["wedding_ring"] },
+	"6": { "fragment_object": "red_scribble", "required_objects": ["red_scribble"] },
+	"7": { "fragment_object": "mirror", "required_objects": ["mirror"] }
+}
