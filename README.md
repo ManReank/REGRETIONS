@@ -10,6 +10,8 @@
 * **Orientasi Layar:** Landscape
 * **Version Control:** Git + Git LFS
 
+  
+
 
 
 
