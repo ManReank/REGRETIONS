@@ -69,6 +69,7 @@ grow_vertical = 0
 [node name="DialogueText" type="Label" parent="UI/DialogueUI/DialoguePanel" unique_id=242056538]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
+vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="FadeUI" type="ColorRect" parent="UI" unique_id=529539786]

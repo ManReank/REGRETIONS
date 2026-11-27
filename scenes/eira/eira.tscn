@@ -16,7 +16,7 @@ script = ExtResource("1_negk1")
 shape = SubResource("CircleShape2D_body")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1000023527]
-scale = Vector2(0.80333334, 0.67214286)
+scale = Vector2(0.3, 0.251)
 sprite_frames = ExtResource("2_d11ye")
 animation = &"idle_left"
 

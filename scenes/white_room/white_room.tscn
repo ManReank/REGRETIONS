@@ -5,18 +5,18 @@
 [ext_resource type="PackedScene" uid="uid://v623g2onj1fk" path="res://scenes/interactables/mirror.tscn" id="2_e61mm"]
 [ext_resource type="PackedScene" uid="uid://ha1egntwolxc" path="res://scenes/furniture/bed.tscn" id="2_smdds"]
 [ext_resource type="PackedScene" uid="uid://dgkebhf7fpnve" path="res://scenes/interactables/flower_wreath.tscn" id="4_smdds"]
-[ext_resource type="Texture2D" path="res://assets/environment/ENV _03 Metal Door 01.png.png" id="env_metaldoor01"]
-[ext_resource type="Texture2D" path="res://assets/environment/ENV _03 Metal Door 02.png.png" id="env_metaldoor02"]
-[ext_resource type="Texture2D" path="res://assets/environment/ENV_05 Sink 01.png.png" id="env_sink01"]
-[ext_resource type="Texture2D" path="res://assets/environment/ENV_05 Sink 02.png.png" id="env_sink02"]
-[ext_resource type="Texture2D" path="res://assets/environment/Coretan Merah 1.png" id="env_redscribbledecal1"]
-[ext_resource type="Texture2D" path="res://assets/environment/Coretan Merah 2.png" id="env_redscribbledecal2"]
-[ext_resource type="Texture2D" path="res://assets/environment/Noda Darah 1.png" id="env_bloodstaindecal1"]
-[ext_resource type="Texture2D" path="res://assets/environment/Noda Darah 2.png" id="env_bloodstaindecal2"]
-[ext_resource type="Texture2D" path="res://assets/environment/Noda Darah 3.png" id="env_bloodstaindecal3"]
-[ext_resource type="Texture2D" path="res://assets/environment/Noda Darah 4.png" id="env_bloodstaindecal4"]
-[ext_resource type="Texture2D" path="res://assets/environment/Noda Darah 5.png" id="env_bloodstaindecal5"]
-[ext_resource type="Texture2D" path="res://assets/environment/Noda Darah 6.png" id="env_bloodstaindecal6"]
+[ext_resource type="Texture2D" uid="uid://do4g4gjyyjorv" path="res://assets/environment/Noda Darah 1.png" id="env_bloodstaindecal1"]
+[ext_resource type="Texture2D" uid="uid://bb3ndolp5m61k" path="res://assets/environment/Noda Darah 2.png" id="env_bloodstaindecal2"]
+[ext_resource type="Texture2D" uid="uid://b1srdd7gstqgh" path="res://assets/environment/Noda Darah 3.png" id="env_bloodstaindecal3"]
+[ext_resource type="Texture2D" uid="uid://cv4txat64nhe" path="res://assets/environment/Noda Darah 4.png" id="env_bloodstaindecal4"]
+[ext_resource type="Texture2D" uid="uid://dce7k88fqxpnt" path="res://assets/environment/Noda Darah 5.png" id="env_bloodstaindecal5"]
+[ext_resource type="Texture2D" uid="uid://cl5mrv83a06ob" path="res://assets/environment/Noda Darah 6.png" id="env_bloodstaindecal6"]
+[ext_resource type="Texture2D" uid="uid://dyr3qglkiqhpp" path="res://assets/environment/ENV _03 Metal Door 01.png.png" id="env_metaldoor01"]
+[ext_resource type="Texture2D" uid="uid://dgng2nwro7bly" path="res://assets/environment/ENV _03 Metal Door 02.png.png" id="env_metaldoor02"]
+[ext_resource type="Texture2D" uid="uid://dx612qp1u1ymq" path="res://assets/environment/Coretan Merah 1.png" id="env_redscribbledecal1"]
+[ext_resource type="Texture2D" uid="uid://dva3wau4fh724" path="res://assets/environment/Coretan Merah 2.png" id="env_redscribbledecal2"]
+[ext_resource type="Texture2D" uid="uid://c3f8cox7yaqrc" path="res://assets/environment/ENV_05 Sink 01.png.png" id="env_sink01"]
+[ext_resource type="Texture2D" uid="uid://db8egorbd5ubl" path="res://assets/environment/ENV_05 Sink 02.png.png" id="env_sink02"]
 
 [node name="WhiteRoom" type="Node2D" unique_id=844027306]
 y_sort_enabled = true
@@ -24,9 +24,13 @@ y_sort_enabled = true
 [node name="Ground" type="Node2D" parent="." unique_id=1210889622]
 
 [node name="Floor" type="Sprite2D" parent="Ground" unique_id=998048861]
-position = Vector2(640, 380)
-scale = Vector2(0.5, 0.5)
+position = Vector2(659, 284)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_e61mm")
+
+[node name="Floor2" type="Sprite2D" parent="Ground" unique_id=1658446565]
+position = Vector2(1041.5, 142)
+scale = Vector2(469.00003, 278.00003)
 
 [node name="WorldObjects" type="Node2D" parent="." unique_id=425917522]
 y_sort_enabled = true
@@ -35,26 +39,109 @@ y_sort_enabled = true
 y_sort_enabled = true
 
 [node name="Bed" parent="WorldObjects/Furniture" unique_id=996731395 instance=ExtResource("2_smdds")]
-position = Vector2(681, 124)
+position = Vector2(601, 363)
+scale = Vector2(0.6, 0.6)
+
+[node name="Bed2" parent="WorldObjects/Furniture" unique_id=116703087 instance=ExtResource("2_smdds")]
+visible = false
+position = Vector2(601, 363)
+scale = Vector2(0.6, 0.6)
+
+[node name="MetalDoor01" type="Sprite2D" parent="WorldObjects/Furniture" unique_id=391269538]
+position = Vector2(416.99997, 232)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("env_metaldoor01")
+offset = Vector2(-8, -963)
+
+[node name="MetalDoor02" type="Sprite2D" parent="WorldObjects/Furniture" unique_id=1039297718]
+position = Vector2(997, 345)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("env_metaldoor02")
+offset = Vector2(138, -963)
+
+[node name="Sink01" type="Sprite2D" parent="WorldObjects/Furniture" unique_id=951162669]
+position = Vector2(186, 389)
+scale = Vector2(0.033, 0.033)
+texture = ExtResource("env_sink01")
+offset = Vector2(0, -805)
+
+[node name="Sink02" type="Sprite2D" parent="WorldObjects/Furniture" unique_id=908070082]
+visible = false
+position = Vector2(1006, 288)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("env_sink02")
+offset = Vector2(105, -746)
 
 [node name="Interactables" type="Node2D" parent="WorldObjects" unique_id=373447528]
 y_sort_enabled = true
 
 [node name="Mirror" parent="WorldObjects/Interactables" unique_id=297100894 instance=ExtResource("2_e61mm")]
-position = Vector2(825, 153)
+position = Vector2(157, 346)
+scale = Vector2(0.4, 0.4)
 
 [node name="Area2D" type="Area2D" parent="WorldObjects/Interactables" unique_id=202638315]
 
 [node name="FlowerWreath" parent="WorldObjects/Interactables" unique_id=1253956523 instance=ExtResource("4_smdds")]
-position = Vector2(895, 370)
+position = Vector2(561, 313)
+scale = Vector2(0.7, 0.7)
 
 [node name="Decorations" type="Node2D" parent="WorldObjects" unique_id=1332493937]
+visible = false
+
+[node name="RedScribbleDecal1" type="Sprite2D" parent="WorldObjects/Decorations" unique_id=2129058231]
+position = Vector2(1357, 578.00006)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("env_redscribbledecal1")
+offset = Vector2(56, -863)
+
+[node name="RedScribbleDecal2" type="Sprite2D" parent="WorldObjects/Decorations" unique_id=1678262839]
+position = Vector2(1530, 700)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("env_redscribbledecal2")
+offset = Vector2(42, -321)
+
+[node name="BloodStainDecal1" type="Sprite2D" parent="WorldObjects/Decorations" unique_id=1962517568]
+position = Vector2(1810, 700)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("env_bloodstaindecal1")
+offset = Vector2(-14, -725)
+
+[node name="BloodStainDecal2" type="Sprite2D" parent="WorldObjects/Decorations" unique_id=1140595268]
+position = Vector2(2090, 700)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("env_bloodstaindecal2")
+offset = Vector2(79, -840)
+
+[node name="BloodStainDecal3" type="Sprite2D" parent="WorldObjects/Decorations" unique_id=1742439955]
+position = Vector2(1250, 1020)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("env_bloodstaindecal3")
+offset = Vector2(70, -530)
+
+[node name="BloodStainDecal4" type="Sprite2D" parent="WorldObjects/Decorations" unique_id=781216417]
+position = Vector2(1530, 1020)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("env_bloodstaindecal4")
+offset = Vector2(-20, -586)
+
+[node name="BloodStainDecal5" type="Sprite2D" parent="WorldObjects/Decorations" unique_id=2022311316]
+position = Vector2(1810, 1020)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("env_bloodstaindecal5")
+offset = Vector2(58, -645)
+
+[node name="BloodStainDecal6" type="Sprite2D" parent="WorldObjects/Decorations" unique_id=203447563]
+position = Vector2(2090, 1020)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("env_bloodstaindecal6")
+offset = Vector2(63, -747)
 
 [node name="Characters" type="Node2D" parent="." unique_id=1229693719]
 y_sort_enabled = true
 
 [node name="Eira" parent="Characters" unique_id=819956635 instance=ExtResource("1_od50t")]
-position = Vector2(576, 400)
+position = Vector2(436, 323)
+scale = Vector2(0.6, 0.6)
 
 [node name="NPCs" type="Node2D" parent="Characters" unique_id=1470480740]
 
@@ -63,81 +150,10 @@ position = Vector2(576, 400)
 [node name="Foreground" type="Node2D" parent="." unique_id=1076815780]
 
 [node name="RoomBounds" type="StaticBody2D" parent="." unique_id=1212725919]
+visible = false
 position = Vector2(640, 380)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RoomBounds" unique_id=438238916]
-position = Vector2(-3, -45)
+position = Vector2(-123, -51)
 build_mode = 1
-polygon = PackedVector2Array(65, -286, 482, -30, -87, 337, -504, 84)
-
-[node name="MetalDoor01" type="Sprite2D" parent="WorldObjects/Furniture"]
-position = Vector2(1250, 320)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("env_metaldoor01")
-offset = Vector2(-8, -963)
-
-[node name="MetalDoor02" type="Sprite2D" parent="WorldObjects/Furniture"]
-position = Vector2(1400, 320)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("env_metaldoor02")
-offset = Vector2(138, -963)
-
-[node name="Sink01" type="Sprite2D" parent="WorldObjects/Furniture"]
-position = Vector2(1650, 320)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("env_sink01")
-offset = Vector2(0, -805)
-
-[node name="Sink02" type="Sprite2D" parent="WorldObjects/Furniture"]
-position = Vector2(1900, 320)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("env_sink02")
-offset = Vector2(105, -746)
-
-[node name="RedScribbleDecal1" type="Sprite2D" parent="WorldObjects/Decorations"]
-position = Vector2(1250, 700)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("env_redscribbledecal1")
-offset = Vector2(56, -863)
-
-[node name="RedScribbleDecal2" type="Sprite2D" parent="WorldObjects/Decorations"]
-position = Vector2(1530, 700)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("env_redscribbledecal2")
-offset = Vector2(42, -321)
-
-[node name="BloodStainDecal1" type="Sprite2D" parent="WorldObjects/Decorations"]
-position = Vector2(1810, 700)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("env_bloodstaindecal1")
-offset = Vector2(-14, -725)
-
-[node name="BloodStainDecal2" type="Sprite2D" parent="WorldObjects/Decorations"]
-position = Vector2(2090, 700)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("env_bloodstaindecal2")
-offset = Vector2(79, -840)
-
-[node name="BloodStainDecal3" type="Sprite2D" parent="WorldObjects/Decorations"]
-position = Vector2(1250, 1020)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("env_bloodstaindecal3")
-offset = Vector2(70, -530)
-
-[node name="BloodStainDecal4" type="Sprite2D" parent="WorldObjects/Decorations"]
-position = Vector2(1530, 1020)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("env_bloodstaindecal4")
-offset = Vector2(-20, -586)
-
-[node name="BloodStainDecal5" type="Sprite2D" parent="WorldObjects/Decorations"]
-position = Vector2(1810, 1020)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("env_bloodstaindecal5")
-offset = Vector2(58, -645)
-
-[node name="BloodStainDecal6" type="Sprite2D" parent="WorldObjects/Decorations"]
-position = Vector2(2090, 1020)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("env_bloodstaindecal6")
-offset = Vector2(63, -747)
+polygon = PackedVector2Array(-79, -125, 153, 20, -153, 217, -387, 75)
